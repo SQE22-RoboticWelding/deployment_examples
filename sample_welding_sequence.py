@@ -10,26 +10,26 @@ def grab_release_reset(niryo):
 
 
 if __name__ == '__main__':
-	rospy.init_node('niryo_one_example_python_api')
+    rospy.init_node('niryo_one_example_python_api')
 
-	n = NiryoOne()
+    n = NiryoOne()
 
-# move to initial position
-n.move_pose(0.1, 0.1, 0.4, 0, 0, 0)
+    # move to initial position
+    n.move_pose(0.1, 0.1, 0.4, 0, 0, 0)
 
-# welding point one
-n.move_pose(0.1, 0.1, 0, 0, 0, 0)
-grab_release_reset(n)
+    # welding point one
+    n.move_pose(0.1, 0.1, 0.1, 0, 0, 0)
+    grab_release_reset(n)
 
-# welding point one
-n.move_pose(0.297, 0, 0.1, 0, 0, 0)
-grab_release_reset(n)
+    # welding point two
+    n.move_pose(0.297, 0, 0.1, 0, 0, 0)
+    grab_release_reset(n)
 
-# welding point one
-n.move_pose(0.297, 0.21, 0.1, 0, 0, -1.5708)
-grab_release_reset(n)
+    # welding point three
+    n.move_pose(0.297, 0.21, 0.1, 0, 0, -0.5708)
+    grab_release_reset(n)
 
-# welding point one
-n.move_pose(0, 0.21, 0.1, 0, 0, 1.5708)
-grab_release_reset(n)
+    # welding point four
+    n.move_pose(0, 0.21, 0.1, 0, 0, 0.5708)
+    grab_release_reset(n)
 

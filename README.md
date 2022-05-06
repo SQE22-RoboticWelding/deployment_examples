@@ -8,9 +8,11 @@ Note: You should see an opened simulator window with the niryo_one robot visuali
 
 ```bash
 docker exec -it niryo_one_test_1 bash
+# in the container bash shell
+roslaunch niryo_one_bringup desktop_rviz_simulation.launch
 ```
 
-Once bashed into the docker container you must execute a command sequence - here written into a script.
+Once the simulator has started execute:
 
 ```bash
 python ~/sample_welding_sequence.py
