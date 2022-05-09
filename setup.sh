@@ -2,6 +2,8 @@
 docker build -t niryo_one_test:0.4 .
 
 # allow docker to access host system's GUI
+# to use xhost "brew install --cask xquartz"
+# start xhost "xhost +localhost"
 xhost +local:docker
 
 # run container with image built above and access to host system's GUI
